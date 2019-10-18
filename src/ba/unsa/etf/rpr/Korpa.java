@@ -1,12 +1,14 @@
 package ba.unsa.etf.rpr;
+
 import java.util.Scanner;
+
 public class Korpa {
     private Artikl[] stvari;
     int vel;
 
     public Korpa() {
         stvari = new Artikl[50];
-        vel= 0;
+        vel = 0;
     }
 
     public Artikl[] getArtikli() {
@@ -29,17 +31,20 @@ public class Korpa {
         }
         return ukupno;
     }
-    public Artikl izbaciArtiklSaKodom(String bar){
-        Artikl izbaci=null;
-        for(int i=0;i<vel;i++){
-            if(stvari[i].kod.equals(bar)) {
+
+    public Artikl izbaciArtiklSaKodom(String bar) {
+        Artikl izbaci = null;
+        for (int i = 0; i < vel; i++) {
+            if (stvari[i].kod.equals(bar)) {
                 izbaci = stvari[i];
                 for (int j = i + 1; j < vel; j++) {
                     stvari[j - 1] = stvari[j];
                 }
                 stvari[vel - 1] = null;
-                --vel;--i;
-            }}
+                --vel;
+                --i;
+            }
+        }
 
         return izbaci;
     }
