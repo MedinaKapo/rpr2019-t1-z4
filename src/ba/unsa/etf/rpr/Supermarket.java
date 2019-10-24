@@ -15,11 +15,13 @@ public class Supermarket {
         return artikli;
     }
 
-    public void dodajArtikl(Artikl a) {
+    public boolean dodajArtikl(Artikl a) {
         if (velicina < 1000) {
             artikli[velicina] = new Artikl(a.getNaziv(), a.getCijena(), a.getKod());
             velicina++;
+            return true;
         }
+        return false;
     }
 
     public Artikl izbaciArtiklSaKodom(String bar) {
