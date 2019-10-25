@@ -24,6 +24,17 @@ public class Supermarket {
         return false;
     }
 
+
+    //VERZIJA METODE SA BACANJEM IZUZETKA
+
+   /*public void dodajArtikl(Artikl a){
+       if(velicina<1000){
+           artikli[velicina]=new Artikl(a.getNaziv(),a.getCijena(),a.getKod());
+           velicina++;
+       }
+       else throw new IllegalArgumentException("Dostignut je limit!");
+   }
+*/
     public Artikl izbaciArtiklSaKodom(String bar) {
         Artikl izbaci = null;
         for (int i = 0; i < velicina; i++) {
